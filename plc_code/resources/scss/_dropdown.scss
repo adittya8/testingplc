@@ -1,0 +1,133 @@
+.notification-dropdown-menu {
+  width: min(360px, 90%);
+  max-height: calc(100vh - $navbar-height * 2);
+  left: 50% !important;
+  transform: translateX(-50%);
+  overflow-y: auto;
+  scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+@media (min-width: 768px) {
+  .notification-dropdown {
+    position: relative;
+  }
+
+  .notification-dropdown-menu {
+    width: 360px;
+    left: auto !important;
+    transform: translateX(0);
+  }
+}
+
+.notification-count {
+  background-color: #cb1515;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 0.7rem;
+  padding: 1px 4px;
+  border-radius: 50px;
+}
+
+.notification-item {
+  padding: 0 0.25rem;
+  position: relative;
+
+  .nav-link {
+    border-radius: 0.5rem !important;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  .title {
+    color: #727272;
+    font-weight: 500;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
+
+  .time {
+    font-size: 0.75rem;
+  }
+
+  .mark-as-read-btn {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    font-size: 0.85rem;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  &:hover .mark-as-read-btn {
+    display: inline-block;
+  }
+}
+
+.notification-item.unread {
+  .title {
+    color: #000;
+  }
+
+  .message,
+  .time {
+    color: #292929;
+  }
+}
+
+.notification-link {
+  border-radius: 0.5rem !important;
+  padding: 0.5rem;
+}
+
+.notif-dropdown-animate {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-from-down {
+  0% {
+    transform: translate(-50%, 1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translate(-50%, 1rem);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes slide-from-down {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+}
+
+.slide-from-down {
+  -webkit-animation-name: slide-from-down;
+  animation-name: slide-from-down;
+}

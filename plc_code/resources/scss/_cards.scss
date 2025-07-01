@@ -1,0 +1,40 @@
+.card {
+  border-radius: 0.5rem;
+  border: 1px solid $border-color;
+}
+
+.card-header {
+  background-color: #fff;
+}
+
+.card-header:first-child {
+  border-radius: calc(0.5rem - 1px) calc(0.5rem - 1px) 0 0;
+}
+
+.company-card {
+  overflow: hidden;
+
+  .title {
+    font-weight: 500;
+  }
+}
+
+.company-card-info {
+  font-size: 0.75rem;
+}
+
+.company-card-img {
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+}
+
+.card-title {
+  &::before {
+    content: "";
+    border-right: 6px solid $success;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-right: 0.75rem;
+  }
+}

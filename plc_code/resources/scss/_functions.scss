@@ -1,0 +1,12 @@
+@function set-color($color, $action: null, $percentage: 0) {
+  @if (lightness($color) > 70) {
+    @if ($action) {
+      @return call(get-function($action), #000, $percentage);
+    }
+    @return #000;
+  }
+  @if ($action) {
+    @return call(get-function($action), #fff, $percentage);
+  }
+  @return #fff;
+}

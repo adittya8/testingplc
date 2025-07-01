@@ -1,0 +1,154 @@
+.component-card {
+  width: 100%;
+  height: 100px;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+#componentRoot [data-custom-element] {
+  min-width: 10rem;
+}
+
+[data-custom-element]:not(img):not(a):not(p),
+[data-custom-element-wrapper] {
+  min-height: 100px;
+  padding: 1rem;
+  padding-top: 2.625rem;
+  border: 1px solid #cbcbcb;
+  position: relative;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    border: 1px solid blue;
+  }
+}
+
+[data-custom-element-wrapper] > img {
+  max-width: 128px;
+  max-height: 128px;
+  object-position: center;
+}
+
+[data-custom-element].row {
+  display: block;
+  width: 100%;
+}
+
+[data-custom-element][class*="col-"] {
+  display: inline-block;
+}
+
+[data-custom-element][class*="col-"]:not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+[data-custom-element].col-1 {
+  width: max(10rem, percentage(calc(1 / 12)));
+}
+
+[data-custom-element].col-2 {
+  width: max(10rem, percentage(calc(2 / 12)));
+}
+
+[data-custom-element].col-3 {
+  width: max(10rem, percentage(calc(3 / 12)));
+}
+
+[data-custom-element].col-4 {
+  width: max(10rem, percentage(calc(4 / 12)));
+}
+
+[data-custom-element].col-5 {
+  width: max(10rem, percentage(calc(5 / 12)));
+}
+
+[data-custom-element].col-6 {
+  width: max(10rem, percentage(calc(6 / 12)));
+}
+
+[data-custom-element].col-7 {
+  width: max(10rem, percentage(calc(7 / 12)));
+}
+
+[data-custom-element].col-8 {
+  width: max(10rem, percentage(calc(8 / 12)));
+}
+
+[data-custom-element].col-9 {
+  width: max(10rem, percentage(calc(9 / 12)));
+}
+
+[data-custom-element].col-10 {
+  width: max(10rem, percentage(calc(10 / 12)));
+}
+
+[data-custom-element].col-11 {
+  width: max(10rem, percentage(calc(11 / 12)));
+}
+
+[data-custom-element].col-12 {
+  width: max(10rem, percentage(calc(12 / 12)));
+}
+
+[data-custom-element] {
+  display: block;
+  width: 100%;
+}
+
+[data-custom-element]:hover .custom-element-tools {
+  display: block;
+}
+
+.custom-element-tools {
+  position: absolute;
+  top: 0.75rem;
+  right: 0;
+  height: 2.5rem;
+  max-width: 7.9rem;
+  padding: 0;
+  margin-top: -1rem;
+}
+
+.custom-element-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .component-tool-btn:not(:last-child) {
+    margin-right: 0.125rem;
+  }
+}
+
+.component-tool-btn {
+  padding: 0.25rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 1.75rem;
+  font-size: 0.625rem;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    color: blue;
+  }
+
+  &:disabled {
+    color: black;
+  }
+}

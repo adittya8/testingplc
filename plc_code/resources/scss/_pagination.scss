@@ -1,0 +1,15 @@
+.pagination {
+  .page-item {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    .page-link {
+      border-radius: 0.75rem;
+    }
+
+    .btn {
+      font-size: 14px;
+    }
+  }
+}

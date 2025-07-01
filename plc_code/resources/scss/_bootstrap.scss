@@ -1,0 +1,37 @@
+@import "bootstrap/scss/_functions";
+
+$purple: #5f76e8;
+$green: #10b981;
+$success: $green;
+$primary: $green;
+$warning: #f97316;
+
+$body-bg: #ecfdf5;
+$card-bg: #fff;
+$dropdown-bg: #fff;
+$modal-content-bg: #fff;
+$table-bg: #fff;
+$form-check-bg: #fff;
+
+$navbar-link-color: #000;
+
+$button-border-radius: 0.75rem;
+
+[data-bs-theme="dark"] {
+  $navbar-link-color: #fff;
+}
+
+@import "bootstrap/scss/_variables";
+
+$custom-colors: (
+  "yellow": $yellow,
+  "purple": $purple,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrap/scss/bootstrap";
+
+$btn-box-shadow: 0 1px 4px rgb(0 0 0 / 20%), 0 2px 4px rgb(0 0 0 / 26%);
+$btn-box-shadow-hover: 0 3px 6px rgb(0 0 0 / 20%), 0 3px 6px rgb(0 0 0 / 26%);
+$btn-box-shadow-focus: 0 8px 18px rgb(0 0 0 / 22%), 0 6px 6px rgb(0 0 0 / 26%);

@@ -1,0 +1,121 @@
+.td-none {
+  text-decoration: none !important;
+}
+
+.td-hover-underline {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.required::before {
+  content: "*";
+  color: $danger;
+  margin-right: 4px;
+}
+
+@each $color, $value in $theme-colors {
+  .bg-#{$color} {
+    background-color: $value;
+    border-color: $value;
+    color: set-color($value);
+  }
+}
+
+h1,
+.h1 {
+  font-size: calc(1.25rem + 1vw);
+}
+
+h2,
+.h2 {
+  font-size: calc(1.15rem + 1vw);
+}
+
+h3,
+.h3 {
+  font-size: calc(1.05rem + 1vw);
+}
+
+h4,
+.h4 {
+  font-size: calc(0.95rem + 1vw);
+}
+
+h5,
+.h5 {
+  font-size: 1.1rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+.ws-no-wrap {
+  white-space: nowrap;
+}
+
+.form-check-label {
+  margin-bottom: 0 !important;
+}
+
+.form-check-lg {
+  .form-check-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .form-check-input {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.form-check-md {
+  .form-check-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .form-check-input {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+}
+
+.h-100px {
+  height: 100px !important;
+}
+
+.h-150px {
+  height: 150px !important;
+}
+
+.bg-dark-transparent {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+@media (min-width: 768px) {
+  .w-md-50 {
+    width: 50% !important;
+  }
+}
+
+.bg-red-200 {
+  background-color: $red-200;
+}
+
+.bg-green-200 {
+  background-color: $green-200;
+}
+
+.bg-blue-200 {
+  background-color: $blue-200;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
